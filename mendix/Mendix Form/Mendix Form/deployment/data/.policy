@@ -1,0 +1,26 @@
+grant codeBase "file:${{java.ext.dirs}}/sunjce_provider.jar" {
+        permission java.security.AllPermission;
+};
+
+grant codeBase "file:${{java.ext.dirs}}/sunmscapi.jar" {
+        permission java.security.AllPermission;
+};
+
+grant codeBase "file:${{java.ext.dirs}}/sunec.jar" {
+        permission java.security.AllPermission;
+};
+
+grant codeBase "file:/C:/Program Files (x86)/Mendix/4.4.4/-" {
+  permission java.security.AllPermission;
+};
+
+grant {
+  permission java.io.FilePermission "U:/Tees/ADB/Jimbo/mendix/Demo7/Demo7/deployment/data/tmp/-", "read, write, delete, execute";
+  permission java.io.FilePermission "U:/Tees/ADB/Jimbo/mendix/Demo7/Demo7/deployment/model/resources/-", "read";
+  permission java.io.FilePermission "U:/Tees/ADB/Jimbo/mendix/Demo7/Demo7/deployment/model/lib/-", "read";
+  permission java.net.SocketPermission "maps.google.com:80", "connect"; 
+  permission java.net.SocketPermission "maps.google.com:443", "connect";
+  permission java.util.PropertyPermission "file.separator", "read";
+  permission java.util.PropertyPermission "path.separator", "read";
+  permission java.util.PropertyPermission "line.separator", "read";
+};

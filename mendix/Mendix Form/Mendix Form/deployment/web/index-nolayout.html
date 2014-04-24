@@ -1,0 +1,79 @@
+<!-- putting IE6-7 in quirks mode -->
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Mendix 4</title>
+
+        <!-- keeping IE8-9 in standards mode -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1" /> 
+
+        <meta http-equiv="expires" content="0" />
+        <meta http-equiv="pragma" content="no-cache" />
+
+        <link type="text/css" rel="stylesheet" href="mxclientsystem/mxui/ui/mxui.css" media="screen"/>
+        <link type="text/css" rel="stylesheet" href="ui/theme-basic/layout.css" media="screen"/>
+        
+        <!--[if IE 6]>
+        <link type="text/css" rel="stylesheet" href="ui/ie6/banner.css" media="screen"/>
+        <![endif]-->
+        
+        <script type="text/javascript" src="mxclientsystem/dojo/dojo.js"></script>
+    </head>
+    <body class="tundra">
+        <div 
+            id="mainbox"
+            class="MxClient_mainContainer"
+            >
+            <div dojoType="dijit.layout.ContentPane"
+                region="top"
+                id="topPane"
+                class="MxClient_topPane"
+                >
+                <div class="MxClient_headerPane">
+                    <div class="MxClient_logoPane png"></div>
+                    <div dojoType="mxui.widget.ThemeSwitch" themes="Default;Basic;Dutch;Dark" label="Pick your theme:"></div>
+                </div>
+                <div class="MxClient_navigationPane">
+                    <div class="MxClient_loader" id="MxClient_loader"></div>
+                    <div dojoType="mxui.widget.Toolbar" id="MxClient_toolbar" class="MxClient_toolbar"></div>
+                    <div dojoType="mxui.widget.Navbar" id="MxClient_navbar" class="MxClient_navbar"></div>
+                    <div dojoType="mxui.widget.TitlePath" id="MxClient_titlepath" class="MxClient_titlepath"></div>
+                </div>
+            </div>
+            <div 
+                class="MxClient_contentContainer"
+                >
+                <div dojoType="mxui.widget.ScreenBuffer"
+                    region="center"
+                    id="contentPort"
+                    doLayout="false"
+                    class="MxClient_contentPane"
+                    >
+                </div>
+            </div>
+            <div dojoType="dijit.layout.ContentPane"
+                region="bottom"
+                class="MxClient_bottomPane"
+                >
+                <div class="MxClient_footerPane">
+                    Powered by <a target="_blank" href="http://www.mendix.com">Mendix</a>
+                </div>
+            </div>
+        </div>
+
+        <!--[if IE 6]>
+        <div id="ie6banner" class="ie6banner" style="display:none">
+            <img src="ui/ie6/ie6banner.png" width="280" height="90" border="0" usemap="#ie6banner" />
+            <map name="ie6banner">
+                <area shape="rect" coords="35,34,75,74" href="http://www.mozilla-europe.org/" target="_blank" title="Mozilla Firefox" />
+                <area shape="rect" coords="82,34,122,74" href="http://www.google.com/chrome/" target="_blank" title="Google Chrome" />
+                <area shape="rect" coords="129,34,169,74" href="http://www.apple.com/safari/" target="_blank" title="Apple Safari" />
+                <area shape="rect" coords="176,34,216,74" href="http://www.microsoft.com/windows/internet-explorer/default.aspx" target="_blank" title="Microsoft Internet Explorer" />
+            </map>
+        </div>
+        <![endif]-->
+
+        <script type="text/javascript" src="mxclientsystem/mxui/mxui.js"></script>
+    </body>
+</html>

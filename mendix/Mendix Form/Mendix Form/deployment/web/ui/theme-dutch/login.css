@@ -1,0 +1,89 @@
+/* Login HTML
+*******************************************/
+body {
+	background-color: #f1e2c4;
+}
+a {
+	color: #000;
+	text-decoration: none;
+}
+a:hover,
+a:focus { 
+	text-decoration: underline; 
+}
+.mainContainer {
+	width: 368px !important;
+}
+.contentPane {
+	height: 287px !important;
+	background: url(images/layout/bg_login.png) no-repeat;
+}
+.loginform {
+	display: block !important;
+}
+legend {
+	color:#FFFFFF;
+	font-size:14px;
+	font-weight:bold;
+	padding:14px 0 0 20px;
+	text-shadow:0 1px 0 #000;
+}
+/*.loginResult {
+	padding: 3px;
+	border:1px solid #C44509;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	background:#FDCEA4;
+}*/
+.wrapper {
+	padding-top: 50px;
+}
+.loginTable {
+	width: 281px !important;
+	margin-left: 40px !important;
+}
+.formLabel {
+	color: #794026;
+	font-weight: bold !important;
+}
+.formInput {
+	height: 28px;
+	width: 185px !important;
+	padding: 5px !important;
+	color: #29384C;
+	border-color: #B0C6CE;
+}
+.loginTable td#trigger {
+	height: 30px;
+}
+.formButton {
+	cursor: pointer;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	padding:3px 5px;
+	color: #FFF;
+	border: 1px solid #af4900;
+	background: url(images/layout/button_gradient.png) repeat-x top;
+}
+.formButton:hover,
+.formButton:focus {
+	background-position: bottom;
+}
+.bottomPane {
+	color: #616161;
+	font-size: 11px;
+	text-align: center;
+}
+
+/** CSS3 for IE
+**************************/
+* html .formButton_left {
+	float: right;
+	padding-left: 3px;
+	background: url(images/layout/ie/buttonLeft_login.png) no-repeat left top;
+}
+* html .formButton { 
+	border: none;
+	padding: 4px 0;
+	background: url(images/layout/ie/buttonRight_login.png) no-repeat right top;
+}

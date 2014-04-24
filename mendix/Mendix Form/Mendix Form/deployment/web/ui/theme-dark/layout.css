@@ -1,0 +1,885 @@
+/* font size */
+body {
+	font-size: 12px;	
+}
+
+/* main layout */
+.MxClient_headerPane {
+	height: 70px;
+	background-color: #2c7bc5;
+}
+.MxClient_logoPane {
+	position: absolute;
+	top: 15px;
+	left: 25px;
+	width: 147px;
+	height: 40px;
+	background-image: url(images/mxOutline.png);
+}
+.MxClient_toolbar {
+	float: left;
+	background-color: #2c7bc5;
+}
+.dj_ie6 .MxClient_toolbar {
+	margin-right: -3px; /* solves 3px bug in ie6 */
+}
+.MxClient_toolbar .mendixToolbar_buttonHover {
+	background-color: #619cd4;
+}
+.MxClient_loader {
+	width: 16px;
+	height: 16px;
+	float: right;
+	padding: 5px 10px;
+	background: transparent url(images/loader.gif) no-repeat scroll center center;
+}
+.MxClient_footerPane {
+	color: #fff;
+	padding: 5px;
+	background-color: #2c7bc5;
+}
+.MxClient_footerPane a {
+	color: #fff;
+}
+.MxClient_footerPane a:hover {
+	text-decoration: none;
+}
+
+/* theme switch */
+.mendixThemeSwitch {
+	position: absolute;
+	right: 25px;
+	top: 30px;
+}
+.mendixThemeSwitch label {
+	color: #fff;
+	margin-right: 5px;	
+}
+
+/* tundra style */
+.tundra .mendixFormTitle_title {
+	margin: 0px;
+	padding: 5px;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+.tundra .MxClient_tableHead {
+	text-align: right;
+	font-weight: normal;
+	background-color: #eee;
+}
+.tundra .MxClient_tableData {
+	background-color: #f5f5f5;
+}
+.tundra .MxClient_nodeWrapper {
+	padding: 5px;	
+}
+.tundra .MxClient_Focus {
+	border-color: #619cd4;
+}
+.tundra .MxClient_formDisabled {
+	color: #333;
+	border-color: #bbb;
+	background: none #eee; 
+}
+.tundra .MxClient_formUnabled {
+	color: #333;
+	border-color: #bbb;
+	background: none #f00;
+}
+
+/* tundra dijit */
+.tundra .dijitDialogUnderlay {
+	background-color: #333;
+}
+
+/* rtl */
+.dijitRtl .MxClient_logoPane {
+	left: auto;
+	right: 25px;
+}
+.dijitRtl .MxClient_toolbar {
+	float: right;
+}
+.dijitRtl.dj_ie6 .MxClient_toolbar {
+	margin-right: 0px;
+	margin-left: -3px; /* solves 3px bug in ie6 */
+}
+.dijitRtl .MxClient_loader {
+	float: left;
+}
+.dijitRtl .mendixThemeSwitch {
+	right: auto;
+	left: 25px;
+}
+.dijitRtl .mendixThemeSwitch label {
+	margin-right: auto;
+	margin-left: 5px;	
+}
+.dijitRtl .tundra .MxClient_tableHead {
+	text-align: left;
+}
+
+/* General HTML
+******************************************/
+body {
+	overflow: auto;
+	font-size: 12px;
+	background: #f0f0f0;
+}
+.MxClient_loader {
+	position:absolute;
+	right:25px;
+	top:110px;
+	padding:0;
+	background: url(images/layout/ajax-loader.gif) no-repeat;
+}
+.mendix_Button_link {
+	color: #0066CC;
+}
+.tundra .mendix_Button_linkHover {
+	text-decoration: none;
+}
+.mendix_Button_link .mendix_Button_caption {
+	color: #0066CC;
+}
+.tundra .mendix_Button_linkHover .mendix_Button_caption {
+	text-decoration: underline;
+}
+
+/* Index
+******************************************/
+.MxClient_contentContainer  {
+	background: #FFF;
+}
+.tundra .dijitBorderContainer {
+	background: none;
+}
+.mx_layout .MxClient_contentPane {
+	padding: 0;
+	border-style: none;
+	background: none;
+}
+.tundra .mendix_Button_button {
+	border-style: none;
+}
+.tundra .mendix_Button_button .mendix_Button_content {	
+	padding: 0;
+	line-height: 15px;
+	color: #5D5D5D;
+	background: url(images/layout/ButtonCenter.png) repeat-x top;
+}
+.tundra .mendix_Button_button .mendix_Button_left {
+	padding-left: 4px;
+	background: url(images/layout/ButtonLeft.png) no-repeat left top;
+}
+.tundra .mendix_Button_button .mendix_Button_right {
+	padding-right: 4px;
+	background: url(images/layout/ButtonRight.png) no-repeat right top;
+}
+.tundra .mendix_Button_button .mendix_Button_image {
+	margin-right: 0;
+}
+.tundra .mendix_Button_button .mendix_Button_caption {
+	padding: 5px 0px;
+}
+.tundra .mendix_Button_buttonHover .mendix_Button_left {
+	background-position: left bottom;
+}
+.tundra .mendix_Button_buttonHover .mendix_Button_right {
+	background-position: right bottom;
+}
+.tundra .mendix_Button_buttonHover .mendix_Button_content {
+	color: #000;
+	background-position: bottom;
+}
+.MxFormView_invalidNode {
+	color: red;
+	font-style: italic;
+}
+.errormsg {
+	color: red;
+}
+.dijitTabSpacer {
+	border-width: 0 1px;
+	border-color: #CCC;
+	border-style: solid;
+}
+.tundra .mendixDataGrid_controlPane {
+	padding: 5px 5px 0;
+	background: #FFF;
+}
+.tundra .mendixFormView {
+	padding-bottom: 5px;
+	border-width: 0 1px 1px 1px;
+	border-style: solid;
+	border-color: #CCC;
+	background: #FFF;
+}
+.tundra .mendixFormView .mendixFormView,
+.tundra .mendixFormView .mendixFormView .mendixDataGrid_tablePane {
+	border: none;
+}
+.tundra .mendixFormView_controlPane {
+	padding:10px 5px 10px 10px;
+	border-style: none;
+	background: #FFF;
+}
+.dj_ie .tundra .mendixWindow .mendixFormView_controlPane {
+	padding-bottom: 0;	
+	border-left: 1px solid #C8C8C8;
+	border-right: 1px solid #C8C8C8;
+}
+.tundra .mendixWindow .mendixFormView {
+	border-style: none;
+	padding-bottom: 0px;
+}
+
+/** TopPane **/ 
+.MxClient_topPane .top {	
+	height: 27px;
+	padding: 4px 25px 0 0;
+	text-align: right;
+	border-bottom: 1px solid #656565;
+	background: #4c4c4c;
+}
+.mendixThemeSwitch {
+	top: 8px;
+}
+.dj_ie .mendixThemeSwitch {
+	top: 5px;
+}
+.dj_ie .MxClient_topPane .top {
+	height: 30px; /** for IE **/
+}
+.mendixThemeSwitch label {
+	color: #fff;
+	margin-right: 5px;	
+}
+.MxClient_headerPane {
+	height: 55px;
+	padding: 15px 25px 0 25px;
+	border-bottom: 1px solid #000;
+	background: #1A1A1A;
+}
+.dj_ie .MxClient_headerPane {
+	height: 70px;
+}
+.MxClient_logoPane {
+	position: relative;
+	left: 0;
+	top: 0;
+	float: left;
+	width: 160px;
+	height: 41px;
+	text-indent: -9999px;
+	background: url(images/layout/mendixLogo.png) no-repeat;
+}
+
+/** Toolbar
+******************************************/
+.MxClient_navbar {
+	border-bottom:1px solid #FFFFFF;
+}
+.MxClient_toolbar {
+	float: right;
+	padding:14px 0 0 0;
+	background: none;
+}
+.mendixToolbar_button {
+	width: 24x;
+	height: 20px;
+	margin: 0 7px 0 0;
+	padding: 0;
+	background: url(images/layout/icons/toolbar.png) no-repeat;
+}
+.tundra .mendixToolbar_desktop {	
+	width: 19px;
+	background: url(images/layout/icons/toolbar.png) no-repeat;
+}
+.tundra .mendixToolbar_refresh {
+	width: 22px;
+	background: url(images/layout/icons/toolbar.png) no-repeat -19px 0;
+}
+.tundra .mendixToolbar_back {
+	background: url(images/layout/icons/toolbar.png) no-repeat -42px 0;
+}
+.tundra .mendixToolbar_forward {
+	background: url(images/layout/icons/toolbar.png) no-repeat -66px 0;
+}
+.tundra .mendixToolbar_logout {
+	width: 16px;
+	margin-right: 0;
+	background: url(images/layout/icons/toolbar.png) no-repeat -90px 0;
+}
+.tundra  .mendixToolbar_buttonHover {
+	background: url(images/layout/icons/toolbar.png) no-repeat 0 -20px;
+}
+.tundra .mendixToolbar_refreshHover {
+	background-position: -19px -20px;
+}
+.tundra .mendixToolbar_backHover {
+	background-position: -42px -20px;
+}
+.tundra .mendixToolbar_forwardHover {
+	background-position: -66px -20px;
+}
+.tundra .mendixToolbar_logoutHover {
+	background-position: -90px -20px;
+}
+.mendixToolbar_devMode,
+.mendixToolbar_metaModel,
+.mendixToolbar_print {
+	display: none;
+}
+button::-moz-focus-inner { border: 0; }
+/** navBar
+******************************************/
+.tundra .mendixNavbar .dijitToolbar {
+	padding-left: 25px;
+	padding-bottom: 2px;
+	border-top: 1px solid #393939;
+	border-bottom: 1px solod #000;
+	background: #1B1B1B url(images/layout/titleBar.png) repeat-x;
+}
+.mendixNavbar .dijitToolbar .dijitButtonText {
+	font-weight: bold;
+	color: #CCC;
+	text-shadow:-1px 1px #000000;
+}
+.tundra .dijitArrowButtonInner {
+	height: 12px;
+	width: 12px;
+	margin-right: 0;
+	background: url(images/layout/menu_arrow.png) no-repeat right top !important;
+}
+.tundra .dijitToolbar .dijitButtonHover,
+.tundra .dijitToolbar .dijitDropDownButtonHover,
+.tundra .dijitToolbar .dijitDropDownButtonFocused {
+	border-style: none;
+	outline: 0;
+	color: #fff;
+	background: none;
+}
+.tundra .dijitToolbar .dijitButtonHover .dijitButtonText,
+.tundra .dijitToolbar .dijitDropDownButtonHover .dijitButtonText,
+.tundra .dijitToolbar .dijitDropDownButtonFocused .dijitButtonText {
+	color: #fff;
+}
+.mendixNavbar .dijitToolbar .dijitDropDownButtonHover .dijitArrowButtonInner,
+.mendixNavbar .dijitToolbar .dijitDropDownButtonFocused .dijitArrowButtonInner {
+	background-position: bottom !important;
+}
+.tundra .dijitToolbar .dijitButton, 
+.tundra .dijitToolbar .dijitToggleButton, 
+.tundra .dijitToolbar .dijitDropDownButton, 
+.tundra .dijitToolbar .dijitComboButton .dijitButtonContents, 
+.tundra .dijitToolbar .dijitComboButton .dijitDownArrowButton {
+	padding:5px 10px;
+	background: url(images/layout/menu_border.png) no-repeat left;
+}
+.tundra .dijitMenu {
+	border: 1px solid #000;
+	background: #353535;
+}
+.tundra .dijitMenuItem {
+	color: #bfbfbe;
+}
+.tundra .dijitMenuPassive .dijitMenuItemHover, 
+.tundra .dijitMenuItemSelected {
+	color: #fff;
+	background: transparent;
+}
+
+/** BreadCrumbs **/
+#breadcrumbs {
+	height: 17px;
+	background: url(images/layout/contentContainer_bg.png) repeat-x top;
+}
+/*#breadcrumbs .bread_left {
+	padding: 0 0 0 8px;
+	margin:0 25px;
+	background: url(images/layout/breadLeft.png) no-repeat left;
+}
+#breadcrumbs .bread_right {
+	padding: 4px 0 7px 0;
+	background: url(images/layout/breadRight.png) no-repeat right;
+}
+#breadcrumbs a {
+	color: #fff;
+	font-size: 10px;
+	text-decoration: none;
+	padding-left: 5px;
+}
+#breadcrumbs a:hover,
+#breadcrumbs a:focus {
+	text-decoration: underline;
+}*/
+
+/** mendixContentPane **/
+.tundra .mendixContentPane {
+	border-style: solid;
+	border-width: 0 1px 1px 1px;
+	border-color: #bababa;
+}
+/** MxClient_contentContainer 
+******************************************/
+.MxClient_contentContainer {
+	margin: 0 25px 10px 25px;
+}
+.tundra .mendixFormTitle {
+	padding:3px 10px 2px 10px;
+	border: 1px solid #C8C8C8;
+	background: #ddd url(images/layout/title_bg.png) repeat-x;
+	-moz-border-radius-topleft:3px; /* CSS3 FF */
+	-moz-border-radius-topright:3px; /* CSS3 FF */
+	-webkit-border-top-left-radius:3px; /* CSS3 Chrome & Safari */
+	-webkit-border-top-right-radius:3px; /* CSS3 Chrome & Safari */
+	border-bottom-top-radius: 3px;  /* CSS3 Opera */
+	border-bottom-top-radius: 3px;	/* CSS3 Opera */
+}
+.tundra .mendixFormTitle_title {
+	padding: 0;
+	color: #5e5d5d;
+	text-shadow:0 1px 0 #FFFFFF;
+}
+/** TemplateGrid 
+******************************************/
+.tundra .templatesystemTemplateGrid {
+	border-width: 0 1px 1px 1px;
+	border-style: solid; 
+	border-color: #BABABA;
+}
+.tundra .templatesystemTemplateGrid_tableHead  {
+	padding: 5px;
+}
+.tundra .templatesystemTemplateGrid_gridItemSelected {
+	background: #FFFFCF !important;
+}
+.tundra .templatesystemTemplateGrid_gridItemEven {
+	background: #f5f5f5;
+}
+.mendixDataGrid_pagingBarPane,
+.templatesystemTemplateGrid_pagingBarPane {
+	color: #646A73;
+}
+.tundra .mendixDataGrid_pagingBarPane .mendix_Button_button,
+.tundra .templatesystemTemplateGrid_pagingBarPane .mendix_Button_button,
+.tundra .mendixDataGrid_pagingBarPane .mendix_Button_button .mendix_Button_content,
+.tundra .templatesystemTemplateGrid_pagingBarPane .mendix_Button_button .mendix_Button_content,
+.tundra .mendixDataGrid_pagingBarPane .mendix_Button_button .mendix_Button_left,
+.tundra .templatesystemTemplateGrid_pagingBarPane .mendix_Button_button .mendix_Button_left,
+.tundra .mendixDataGrid_pagingBarPane .mendix_Button_button .mendix_Button_right,
+.tundra .templatesystemTemplateGrid_pagingBarPane .mendix_Button_button .mendix_Button_right {
+	background: none;
+}
+.templatesystemTemplateGrid_contentButton {
+	border-style: none;
+}
+.templatesystemTemplateGrid_gridItem {
+	margin-bottom: 10px;
+	background: #f9f9f9;
+}
+.templatesystemTemplateGrid_gridItemSelected {
+	border-color: #8a8a8a;
+	background: #eee; 
+}
+
+/** mendixDataGrid 
+******************************************/
+.tundra .mendixDataGrid {
+	padding: 0;
+	border-style: solid;
+	border-color: #ccc;
+	border-width: 0 1px;
+	background: transparent;
+}
+.tundra .mendixDataGrid_content {
+	border: 1px solid #BABABA;
+	background-color: #FFF;
+}
+.tundra .mendixDataGrid .mendix_Button {
+	border-style: none;
+	background: transparent;
+}
+.tundra .mendixDataGrid_tablePane {
+	border-bottom: 1px solid #CCC;
+}
+.tundra .mendixDataGrid .mendixDataGrid_tablePane .mendixDataGrid_tableData {
+	border-bottom: none;
+}
+.tundra .mendixDataGrid_gridHead .mendixDataGrid_tableHead {
+	padding: 2px;
+	border-width: 1px 1px 1px 0;
+	border-style: solid;
+	border-color: #C8C8C8;
+	color: #646A73;
+	background: #E6E6E6;
+}
+.tundra .mendixDataGrid_tableHeadLast,
+.tundra .mendixDataGrid_gridHead .mendixDataGrid_tableHeadLast {
+	border-right: none;
+}
+.tundra .mendixDataGrid_tableHeadFirst {
+	border-left: none;
+}
+.tundra .mendixDataGrid_tableHead  .mendixDataGrid_sortTextIcon {
+	display: none;
+}
+.tundra .mendixDataGrid_sortIcon {
+	width: 7px;
+	height: 8px;
+	padding:4px 5px;
+	margin: 6px 10px 0 0;
+}
+.tundra .mendixDataGrid_tableHeadAsc .mendixDataGrid_sortIcon {
+	background: transparent url(images/layout/sortTextIcon_arrow_asc.gif) no-repeat right;
+}
+.tundra .mendixDataGrid_tableHeadDesc .mendixDataGrid_sortIcon {
+	background: transparent url(images/layout/sortTextIcon_arrow_desc.gif) no-repeat right;
+}
+.tundra .mendixDataGrid_tableData {
+	padding: 6px;
+	color: #616161;
+	border-color: #D4D6D9;
+	border-width: 0 1px 1px 0;
+	border-style: solid; 
+}
+.tundra .mendixDataGrid_tableDataLast {
+	border-right: none;
+}
+.tundra .mendixDataGrid_tableRowOdd {
+	color: #464646;
+	background-color: #fff;
+}
+.tundra .mendixDataGrid_tableRowEven {
+	background: #f5f5f5 !important;
+}
+.tundra .mendixDataGrid_tableRowLast .mendixDataGrid_tableData {
+	border-bottom: none;
+}
+.tundra .mendixDataGrid_tableRowSelected .mendixDataGrid_tableData,
+.tundra .mendixDataGrid_tableRowFocused .mendixDataGrid_tableData {
+	padding: 6px;
+	font-weight: normal;
+	color: #000;
+	background-color: #FFFFCF;
+}
+.tundra .mendixDataGrid_tableRowFocused .mendixDataGrid_tableData {
+	padding: 6px;
+	background-color: #fdfde4;
+}
+.mendixFormView_contentPane {
+	border: none;
+}
+.tundra .dijitTabPaneWrapper {
+	border: none;
+	background: none;
+}
+
+/** mendixDataGrid_searchPane 
+******************************************/
+.mendixDataGrid_searchItemTextBox,
+.mendixDataGrid_searchItemSelectBox {
+	border-color: #CCC;
+}	
+.tundra .mendixDataGrid_searchPane,
+.tundra .templatesystemTemplateGrid_searchPane {
+	margin: 0;
+	background-color: #fff !important;
+}
+
+/** mendixWindow
+******************************************/
+.tundra .mendixwindow {
+	padding: 3px;
+	border-color: #a9a9a9;
+	background: #FFF;
+	-moz-border-radius:3px; /* CSS3 Firefox */
+	-webkit-border-radius:3px; /* CSS3 Chrome & Safari */
+	-moz-box-shadow:0 0 8px #555555; /* CSS3 Firefox */
+	-webkit-box-shadow: 0 0 4px #999; /* CSS3 Chrome & Safari */
+	box-shadow:0 0 8px #555555; /* CSS3 Opera */
+}
+.tundra .mendixWindow_header {
+	height: 28px;
+	padding-right:10px;
+	border: none;
+	background: url(images/layout/title_bg.png) repeat-x;
+}
+.tundra .mendixWindow_title {
+	color: #5E5D5D;
+	text-shadow: 0 1px 0 #FFFFFF;
+}	
+.tundra .mendixWindow_content {
+	border: none;
+	background: #fff;
+}
+.tundra .mendixWindow .mendixFormView_table {
+	border-width: 1px 0 0 0;
+	border-style: solid;
+	border-color: #C8C8C8;
+}
+.tundra .mendixWindow_button {
+	display:block;
+	height:16px;
+	width:16px;
+	margin-top: 6px;
+	background-repeat:no-repeat;
+	background-image: url(images/layout/icons/icons.png);
+}
+.tundra .mendixFormView_controlPane .mendix_Button {
+	border: none;
+	margin-bottom: 0;
+	background: none;
+}
+.tundra .mendixWindow_buttonHover {
+	background-color: transparent;
+}
+.tundra .mendixWindow_buttonHide {
+	background: transparent url(images/layout/icons/icons.png) no-repeat scroll -64px -128px;
+}
+.tundra .mendixWindow_buttonShow {
+	background: transparent url(images/layout/icons/icons.png) no-repeat scroll -32px -128px;
+}
+.tundra .mendixWindow_buttonMaximize {
+	width: 14px;
+	background: transparent url(images/layout/icons/icons.png) no-repeat scroll -48px -80px;
+}
+.tundra .mendixWindow_buttonClose {
+	background: transparent url(images/layout/icons/icons.png) no-repeat scroll -95px -128px;
+}
+.tundra .mendixWindow_buttonTextIcon {
+	display: none;
+}
+.tundra .mendixFormView_textBox, 
+.tundra .mendixFormView_textArea,
+.tundra .mendixFormView_selectBox,
+.tundra .mendixReferenceSelector_selectBox {
+	border-color: #7C7C7C #C3C3C3 #DDDDDD;
+}
+.tundra th.mendixFormView_nodeWrapper,
+.tundra td.mendixFormView_nodeWrapper {
+	background: #FFF;
+}
+.tundra .mendixFormDatePicker_dateInput,
+.tundra .mendixReferenceSelector_inputBox,
+.tundra .mendixFormDatePicker_buttonTextIcon,
+.tundra .mendixReferenceSelector_buttonTextIcon,
+.tundra .templatesystemTemplateGrid_itemContainer  {
+	border-color: #ccc;
+}
+.tundra .mendixFormDatePicker_buttonPick {
+	height: 16px;
+	width: 16px;
+	border: 1px solid #ccc;
+	background: url(images/layout/icons/icons.png) no-repeat -144px -144px;
+}
+.tundra .mendixFormDatePicker_buttonTextIcon,
+.tundra .mendixReferenceSelector_buttonTextIcon {
+	display: none;
+}
+.tundra .mendixReferenceSelector_button {
+	width: 17px;
+	height: 17px;
+	border: 1px solid #ccc;
+}
+.tundra .mendixReferenceSelector_buttonGoto {
+	background: url(images/layout/icons/icons.png) no-repeat -32px -80px;
+}
+.tundra .mendixReferenceSelector_buttonAdd {
+	background: url(images/layout/icons/icons.png) no-repeat -16px -129px;;
+}
+
+/** datepicker **/
+.mendixWindow .MxDatePicker {
+	border: 1px solid #CCCCCC;
+}
+.mendixWindow .MxDatePicker .dijitCalendarContainer {
+	width: 100%;
+	border: none;
+}
+.tundra .dijitCalendarNextYear, 
+.tundra .dijitCalendarPreviousYear {
+	vertical-align: top;
+}	
+.tundra .dijitCalendarSelectedYear {
+	padding-top: 0;
+}
+
+/** mendixDataGrid in a MxWindow
+******************************************/
+/*.tundra .mendixwindow .mendixDataGrid,
+.tundra .mendixFormView .mendixDataGrid {
+	border-top: 1px solid #CCC;
+}*/
+.mendixWindow .mendixDataGrid_borderLeftBottom,
+.mendixWindow .mendixDataGrid_borderRightBottom {
+	padding: 0;
+	background: none;
+}
+.tundra .mendixWindow .mendixDataGrid_borderCenterBottom {
+	height: 7px;
+	padding: 0;
+	background: #fcfcfc;
+}
+
+/** TabPane
+******************************************/
+.tundra .dijitTabContainerTop-tabs {
+	background: none;
+}
+/*.tundra .mendixFormView .dijitTabContainerTop-tabs {
+	padding-left: 5px;
+}*/
+.tundra .dijitTab {
+	margin-right: 1px;
+	color: #000;
+	border-color:#CCC ;
+	border-style:solid;
+	border-width:1px;
+	background: #E6E6E6;
+	-moz-border-radius-topleft:3px;  /* CSS3 Firefox */
+	-moz-border-radius-topright:3px; /* CSS3 Firefox */
+	-webkit-border-top-left-radius:3px; /* CSS3 Chrome & Safari */
+	-webkit-border-top-right-radius:3px; /* CSS3 Chrome & Safari */
+	border-top-right-radius: 3px; /* CSS3 Opera */
+	border-top-left-radius: 3px; /* CSS3 Opera */
+}
+.tundra  .dijitTabChecked {
+	color: #333;
+	background: #FFF;
+}	
+
+/** Nested TabPane **/
+.tundra .dijitTabContainerTabListNested .dijitTab .dijitTabInnerDiv {
+	padding:6px 8px 5px 9px;
+	background: none;
+}
+.tundra .dijitTabContainerTabListNested .dijitTab .dijitTabContent {
+	padding: 0;
+	text-decoration: underline;
+	border-style: none;
+	background: none;
+}
+
+/** Footer **/
+.MxClient_footerPane {
+	margin:0 25px;
+	padding: 10px 0;
+	font-size:0.9em;
+	color: #555;
+	border-top:1px solid #CCC;
+	background: none;
+}
+.MxClient_footerPane a {
+	text-decoration: none;
+	color: #0073EA;
+}
+.MxClient_footerPane a:hover,
+.MxClient_footerPane a:focus {
+	color: #000;
+	text-decoration: underline;
+}
+
+/** CSS3 for IE
+******************************************/
+/** Title **/
+.dj_ie .tundra .mendixFormTitle {
+	padding: 0;
+	border-style: solid;
+	border-width: 0 0 1px 0;
+	border-color: #C8c8C8;
+	height: 24px;
+	background: none;
+}
+.dj_ie .tundra .mendixFormTitle_title {
+	padding: 4px 10px 4px 10px;
+	background: none;
+}
+.dj_ie .mendixFormTitle_borderCenter {
+	background: #C26600 url(images/layout/ie/title_center.png) repeat-x;
+}
+.dj_ie .mendixFormTitle_borderLeft {
+	padding-left: 3px !important;
+	background: url(images/layout/ie/title_left.png) no-repeat left top !important;
+}
+.dj_ie .mendixFormTitle_borderRight {
+	padding-right: 3px;
+	background: url(images/layout/ie/title_right.png) no-repeat right top;
+}
+
+/** Tabpane **/
+.dj_ie .tundra .dijitTab {
+	border-width: 0 0 1px 0; 
+	border-style: solid;
+	border-color: #ccc;
+	background: url(images/layout/ie/TabLeft.png) no-repeat left top;
+}
+.dj_ie .tundra .dijitTab .dijitTabInnerDiv {
+	padding:0 5px;
+	background: url(images/layout/ie/TabRight.png) no-repeat right top;
+}
+.dj_ie .tundra .dijitTab .dijitTabContent {
+	padding:5px;
+	border-top:1px solid #CCC;
+	background: #e6e6e6;
+}
+.dj_ie .tundra  .dijitTabChecked {
+	color: #333;
+	border-bottom-color: #FFF;
+	background-image: url(images/layout/ie/TabCheckedLeft.png);
+}
+.dj_ie .tundra .dijitTabChecked .dijitTabInnerDiv {
+	background-image: url(images/layout/ie/TabCheckedRight.png);
+}
+.dj_ie .tundra  .dijitTabChecked .dijitTabContent {
+	border-top: 1px solid #ccc;
+	background: #fff;
+}
+
+/** mendixWindow **/
+.dj_ie .mendixWindow {
+	border-style: none;
+	background: none;
+}
+.dj_ie .mendixWindow .mendixProgress,
+.dj_ie .mendixWindow .mendixFormView_contentPane {
+	border-width: 0 1px;
+	border-style: solid;
+	border-color: #CCC;
+	background: #FFF;
+}
+.dj_ie .mendixWindow_borderLeftTop {
+	padding-left:6px;
+	background:transparent url(images/layout/ie/borderLeft.png) no-repeat left top;
+}
+.dj_ie .mendixWindow_borderRightTop {
+	padding-right:4px;
+	background:transparent url(images/layout/ie/borderRight.png) no-repeat right top;
+}
+.dj_ie .tundra .mendixWindow_header {
+	padding: 0;
+	border-style: none;
+	background: url(images/layout/ie/borderCenter.png) repeat-x;
+}
+.dj_ie .tundra .mendixWindow_borderBottom {
+	border-style: none;
+}
+.dj_ie .mendixWindow_borderLeftBottom {
+	padding-left: 6px;
+	background:transparent url(images/layout/ie/borderBottomLeft.png) no-repeat left bottom;
+}
+.dj_ie .mendixWindow_borderRightBottom {
+	padding-right: 6px;
+	background:transparent url(images/layout/ie/borderBottomRight.png) no-repeat right bottom;
+}
+.dj_ie .mendixWindow_borderCenterBottom {
+	height: 10px;
+	font-size: 0;
+	border-bottom: 1px solid #bababa;
+	background: #FFF;
+}
+.dj_ie .tundra .mendixFormDatePicker_buttonPick {
+	background-position: -145px -145px;
+}

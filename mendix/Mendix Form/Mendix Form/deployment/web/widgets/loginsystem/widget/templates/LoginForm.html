@@ -1,0 +1,19 @@
+<form class="${baseClass}" dojoAttachPoint="loginForm">
+	<div class="${baseClass}_messagePane">
+    	<span class="${baseClass}_messageNode" dojoAttachPoint="messageNode">&nbsp;</span>
+    </div>
+    <div class="${baseClass}_formane">
+        <input type="text" class="${baseClass}_usernameInput" dojoAttachPoint="usernameInput" />
+        <input type="password" class="${baseClass}_passwordInput" dojoAttachPoint="passwordInput" />
+        <input type="submit" class="${baseClass}_submitButton" dojoAttachPoint="submitButton" />
+    </div>
+    <div class="${baseClass}_checkPane">
+		<div class="${baseClass}_forgotPwd" dojoAttachPoint="forgotPane">
+			<a class="${baseClass}_forgotLink" href="#" dojoAttachPoint="forgotLink"></a>
+		</div>	
+		<div class="${baseClass}_autoSignin" dojoAttachPoint="checkPane">
+    		<input type="checkbox" class="${baseClass}_checkboxInput" dojoAttachPoint="checkboxInput" />
+    		<label class="${baseClass}_checkboxLabel" dojoAttachPoint="checkboxText"></label>
+		</div>
+    </div>
+</form>

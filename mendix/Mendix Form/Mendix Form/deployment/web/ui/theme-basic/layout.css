@@ -1,0 +1,121 @@
+/* font size */
+body {
+	font-size: 12px;	
+}
+
+/* main layout */
+.MxClient_headerPane {
+	height: 70px;
+	background-color: #2c7bc5;
+}
+.MxClient_logoPane {
+	position: absolute;
+	top: 15px;
+	left: 25px;
+	width: 147px;
+	height: 40px;
+	background-image: url(images/mxOutline.png);
+}
+.MxClient_toolbar {
+	float: left;
+	background-color: #2c7bc5;
+}
+.dj_ie6 .MxClient_toolbar {
+	margin-right: -3px; /* solves 3px bug in ie6 */
+}
+.MxClient_toolbar .mendixToolbar_buttonHover {
+	background-color: #619cd4;
+}
+.MxClient_loader {
+	width: 16px;
+	height: 16px;
+	float: right;
+	padding: 5px 10px;
+	background: transparent url(images/loader.gif) no-repeat scroll center center;
+}
+.MxClient_footerPane {
+	color: #fff;
+	padding: 5px;
+	background-color: #2c7bc5;
+}
+.MxClient_footerPane a {
+	color: #fff;
+}
+.MxClient_footerPane a:hover {
+	text-decoration: none;
+}
+
+/* theme switch */
+.mendixThemeSwitch {
+	position: absolute;
+	right: 25px;
+	top: 30px;
+}
+.mendixThemeSwitch label {
+	color: #fff;
+	margin-right: 5px;	
+}
+
+/* tundra style */
+.tundra .mendixFormTitle_title {
+	margin: 0px;
+	padding: 5px;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+.tundra .MxClient_tableHead {
+	text-align: right;
+	font-weight: normal;
+	background-color: #eee;
+}
+.tundra .MxClient_tableData {
+	background-color: #f5f5f5;
+}
+.tundra .MxClient_nodeWrapper {
+	padding: 5px;	
+}
+.tundra .MxClient_Focus {
+	border-color: #619cd4;
+}
+.tundra .MxClient_formDisabled {
+	color: #333;
+	border-color: #bbb;
+	background: none #eee; 
+}
+.tundra .MxClient_formUnabled {
+	color: #333;
+	border-color: #bbb;
+	background: none #f00;
+}
+
+/* tundra dijit */
+.tundra .dijitDialogUnderlay {
+	background-color: #333;
+}
+
+/* rtl */
+.dijitRtl .MxClient_logoPane {
+	left: auto;
+	right: 25px;
+}
+.dijitRtl .MxClient_toolbar {
+	float: right;
+}
+.dijitRtl.dj_ie6 .MxClient_toolbar {
+	margin-right: 0px;
+	margin-left: -3px; /* solves 3px bug in ie6 */
+}
+.dijitRtl .MxClient_loader {
+	float: left;
+}
+.dijitRtl .mendixThemeSwitch {
+	right: auto;
+	left: 25px;
+}
+.dijitRtl .mendixThemeSwitch label {
+	margin-right: auto;
+	margin-left: 5px;	
+}
+.dijitRtl .tundra .MxClient_tableHead {
+	text-align: left;
+}

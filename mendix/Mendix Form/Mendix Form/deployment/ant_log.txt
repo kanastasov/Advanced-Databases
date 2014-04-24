@@ -1,0 +1,8 @@
+Buildfile: U:\Tees\ADB\Jimbo\mendix\Demo7\Demo7\deployment\build.xml
+
+compile:
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+
+

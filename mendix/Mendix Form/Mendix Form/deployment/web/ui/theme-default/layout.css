@@ -1,0 +1,778 @@
+/*   
+Theme Name: Mendix Default Theme
+Description: Mendix 4.0 Default Theme 
+Author: Mendix
+Author URL: http://www.mendix.com 
+Version: 1.0
+*/
+
+/* Globals */
+body { 
+	text-align: center;
+	font-size: 12px;
+	color: #333;
+	background: #DEF5FE url(images/layout/body_bg.png) repeat-x top; 
+}
+a,
+.default .mendix_Button_link,
+.default .mendix_Button_link .mendix_Button_caption { 
+	color: #0069D6;
+	text-decoration: none; 
+}
+a:hover,
+a:focus,
+.default .mendix_Button_linkHover .mendix_Button_caption {
+	color: #00438A;
+	text-decoration: underline;
+}
+
+/* Main Container */
+.default .MxClient_mainContainer {
+	width: 84%;
+	margin: auto;
+	text-align: left;
+}
+.default .mendixTitlePath { 
+	height: 13px; 
+	padding: 5px 30px; 
+}
+
+/* Header */
+.default .MxClient_headerPane { 
+	height: 50px;
+	padding: 10px 20px 0;
+	background: #FFF;
+}
+.default .MxClient_logoPane { 
+	float: left;
+	position: relative; 
+	width: 155px; 
+	height: 38px; 
+	background-image: url(images/layout/logo.png); 
+}
+.default .mendixThemeSwitch { 
+	float: left;
+}
+.default .mendixThemeSwitch label {  
+	margin-right: 5px;	
+}
+.default .MxClient_toolbar { 
+	float: left; 
+	height: 18px;
+	padding: 4px 0 0 7px;
+}
+.dj_ie6 .MxClient_toolbar { margin-right: -3px; /* solves 3px bug in ie6 */ }
+.default .MxClient_toolbar .mendixToolbar_button { height: 18px; }
+
+.default .MxClient_toolbar .mendixToolbar_desktop { background-image: url(images/layout/icons/icnDesktop.png); }
+/*.default .MxClient_toolbar .mendixToolbar_refresh { background-image: url(images/layout/icons/icnRefresh.png); }
+.default .MxClient_toolbar .mendixToolbar_back { background-image: url(images/layout/icons/icnBack.png); }
+.default .MxClient_toolbar .mendixToolbar_forward { background-image: url(images/layout/icons/icnForward.png); }
+.default .MxClient_toolbar .mendixToolbar_logout { background-image: url(images/layout/icons/icnLogOut.png); }*/
+
+.default .MxClient_toolbar .mendixToolbar_refresh,
+.default .MxClient_toolbar .mendixToolbar_back,
+.default .MxClient_toolbar .mendixToolbar_forward,
+.default .MxClient_toolbar .mendixToolbar_logout {
+	display: none;
+}
+
+.default .MxClient_loader { 
+	width: 16px; 
+	height: 16px; 
+	float: right; 
+	padding: 5px 10px; 
+	background: transparent url(images/layout/loader.gif) no-repeat scroll center center; 
+}
+.default .currentUserDiv {
+	float: right;
+	margin-top: 13px;
+}
+.dj_quirks .default .currentUserDiv {
+	width: 220px;
+}
+.default .userAttrLabel { float: left; }
+.default .log { float: right; margin: 5px 0 0 3px; }
+.default .log a { padding-left: 3px; }
+
+/* Menu */
+.default .navigationPane_bg {
+	overflow: hidden; /* For when there is no menu */
+	height: 27px; /* When there are no menu items */
+	padding: 5px 0 5px 10px;
+	margin-bottom: 10px;
+	background: #1769A0 url(images/layout/nav_bg.png) repeat-x top;
+	-webkit-border-bottom-right-radius: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-moz-border-radius-bottomright: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+.dj_quirks .default .navigationPane_bg {
+	height: 40px; /* menu IE7 */
+}
+.default .mendixNavbar .dijitToolbar { 
+	border-bottom: none; 
+	background: none; 
+}
+.default .dijitToolbar .dijitButton,
+.default .dijitToolbar .dijitDropDownButton { 
+	margin: 0; 
+	padding: 5px 10px;
+	border-style: none;
+	background: url(images/layout/menu_border.png) no-repeat right top;  
+}
+.default .mendixNavbar .dijitHover, 
+.default .dijitToolbar .dijitDropDownButtonFocused,
+.default .dijitToolbar .mendixNavbar_active { 
+	margin: 0; 
+	padding: 4px 9px;
+	border: 1px solid #1F5F8E;
+	background: #FFF;
+}
+.default .dijitToolbar .dijitDropDownButtonFocused {
+	padding-bottom: 5px;
+	border-bottom: none;
+	-webkit-border-bottom-right-radius: 0;
+	-moz-border-radius-bottomright: 0;
+	border-bottom-right-radius: 0;
+	-webkit-border-bottom-left-radius: 0;
+	-moz-border-radius-bottomleft: 0;
+	border-bottom-left-radius: 0;
+}
+.default .dijitArrowButtonInner { 
+	margin-top: 4px;
+	width: 9px;
+	background-image: url(images/layout/icons/menu_arrow.png); 
+}
+.default .mendixNavbar .dijitHover .dijitArrowButtonInner,
+.default .mendixNavbar .dijitDropDownButtonFocused .dijitArrowButtonInner,
+ .default .mendixNavbar .mendixNavbar_active .dijitArrowButtonInner {
+	background-image: url(images/layout/icons/menu_arrow_hover.png);
+}
+.default .mendixNavbar .dijitToolbar .dijitButtonText { 
+	padding: 0; 
+	color: #FFF; 
+	font-weight: bold;
+	font-size: 13px;
+}
+.default .mendixNavbar .dijitHover .dijitButtonText,
+.default .dijitToolbar .dijitDropDownButtonFocused .dijitButtonText,
+.default .dijitToolbar .mendixNavbar_active .dijitButtonText {
+	color: #2172A9;
+	text-decoration: none;
+}
+.default .dijitHover .dijitButtonText {
+	text-decoration: underline;
+}
+.default .dijitMenu { /* Dropdown Menu */
+	border-top: none;
+	border-color: #1f5f8e;
+	background: #FFF;
+}
+.default .dijitMenuItemLabel {
+	color: #000;
+}
+.default .dijitMenuPassive .dijitMenuItemHover, 
+.default .dijitMenuItemSelected { 
+	color: #000; 
+	text-decoration: underline;
+	background: #DDEDF2; 
+}
+
+/* Breadcrumbs */
+.default .mendixTitlePath {
+	padding: 7px 14px;
+	border: 1px solid #DDD;
+	background-color: #F5F5F5;
+	background-repeat: repeat-x;
+	background-image: -khtml-gradient(linear, left top, left bottom, from(#FFFFFF), to(#F5F5F5));
+	background-image: -moz-linear-gradient(top, #FFFFFF, #F5F5F5);
+	background-image: -ms-linear-gradient(top, #FFFFFF, #F5F5F5);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FFFFFF), color-stop(100%, #F5F5F5));
+	background-image: -webkit-linear-gradient(top, #FFFFFF, #F5F5F5);
+	background-image: -o-linear-gradient(top, #FFFFFF, #F5F5F5);
+	background-image: linear-gradient(top, #FFFFFF, #F5F5F5);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#F5F5F5', GradientType=0);
+
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: inset 0 1px 0 #FFF;
+	-moz-box-shadow: inset 0 1px 0 #FFF;
+	box-shadow: inset 0 1px 0 #FFF;
+}
+
+/* MendixFormView */
+.default .mendixFormTitle_title { 
+	margin: 0px; 
+	padding: 5px; 
+	color: #373B43; 
+	font-size: 1.2em;	
+	font-weight: bold; 
+}
+.default .mendixFormView_tableHead { 
+	padding-top: 10px;
+	font-weight: normal; 
+	background-color: #FFF; 
+}
+.default .mendixFormView_tableData { 
+	background-color: #FFF; 
+}
+.default .mendixFormView_controlPane { 
+	border: 1px solid #D9D9D9; 
+	background: #ECECEC url(images/layout/controlPane_bg.png) repeat-x top; 
+}
+.default .mendixFormView_headerLabel .mendixFormView_label  { 
+	display: block; 
+	padding: 3px 5px;
+	border: 1px solid #CCCCE3; 
+	font-size: 1.1em; 
+	color: #3C3F5F;
+	background: #ECF0F9 url(images/layout/headerLabel_bg.png) repeat-x top;
+    -webkit-border-top-left-radius: 3px;
+	-webkit-border-top-right-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-topright: 3px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+.default .mendixFormDatePicker_buttonPick {
+	background-image: url(images/layout/icons/icnPick.png);
+}
+
+/* Buttons */
+.default .mendix_Button_button {
+	border: 1px solid #CCC;
+	border-bottom-color: #BBB;
+	background-color: #E6E6E6;
+	background-repeat: no-repeat;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FFFFFF), color-stop(25%, #FFFFFF), to(#E6E6E6));
+	background-image: -webkit-linear-gradient(#FFFFFF, #FFFFFF 25%, #E6E6E6);
+	background-image: -moz-linear-gradient(top, #FFFFFF, #FFFFFF 25%, #E6E6E6);
+	background-image: -ms-linear-gradient(#FFFFFF, #FFFFFF 25%, #E6E6E6);
+	background-image: -o-linear-gradient(#FFFFFF, #FFFFFF 25%, #E6E6E6);
+	background-image: linear-gradient(#FFFFFF, #FFFFFF 25%, #E6E6E6);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#E6E6E6', GradientType=0);
+
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+
+	-webkit-transition: 0.1s linear all;
+	-moz-transition: 0.1s linear all;
+	-ms-transition: 0.1s linear all;
+	-o-transition: 0.1s linear all;
+	transition: 0.1s linear all;
+}
+.default .mendix_Button_buttonHover,
+.default .mendixLogin_formButton:hover {
+	background-position: 0 -15px;
+}
+.default .mendix_Button_button .mendix_Button_caption {
+	color: #333;
+	font-weight: bold;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+}
+.default .mendixLogin_formButton {
+	color: #FFF;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.default .mendix_Button_image {
+	margin-right: 0;
+}
+.default .mendixLogin_formButton {
+	border-color: #0064cd #0064cd #003f81;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	background-color: #0064cd;
+	background-repeat: repeat-x;
+	background-image: -khtml-gradient(linear, left top, left bottom, from(#049cdb), to(#0064cd));
+	background-image: -moz-linear-gradient(top, #049cdb, #0064cd);
+	background-image: -ms-linear-gradient(top, #049cdb, #0064cd);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #049cdb), color-stop(100%, #0064cd));
+	background-image: -webkit-linear-gradient(top, #049cdb, #0064cd);
+	background-image: -o-linear-gradient(top, #049cdb, #0064cd);
+	background-image: linear-gradient(top, #049cdb, #0064cd);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#049cdb', endColorstr='#0064cd', GradientType=0);
+}
+
+/* Paging Buttons */
+.default .mendixDataGrid_pagingBarPane .mendixDataGrid_pagingButtonFirst,
+.default .templatesystemTemplateGrid_pagingBarPane .templatesystemTemplateGrid_pagingButtonFirst {
+	border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    -moz-border-radius-bottomright: 0;
+	-moz-border-radius-topright: 0;
+	-webkit-border-top-right-radius: 0;
+	-webkit-border-bottom-right-radius: 0;
+}
+.default .mendixDataGrid_pagingBarPane .mendixDataGrid_pagingButtonPrevious,
+.default .mendixDataGrid_pagingBarPane .mendixDataGrid_pagingButtonLast,
+.default .templatesystemTemplateGrid_pagingBarPane .templatesystemTemplateGrid_pagingButtonPrevious,
+.default .templatesystemTemplateGrid_pagingBarPane .templatesystemTemplateGrid_pagingButtonLast {
+	border-left: none;
+    margin-left: 0;
+	border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    -moz-border-radius-bottomleft: 0;
+	-moz-border-radius-topleft: 0;
+	-webkit-border-top-left-radius: 0;
+	-webkit-border-bottom-left-radius: 0;
+}
+.default .mendixDataGrid_pagingBarPane .mendixDataGrid_pagingButtonNext,
+.default .mendixDataGrid_pagingBarPane .mendixDataGrid_pagingButtonPrevious,
+.default .templatesystemTemplateGrid_pagingBarPane .templatesystemTemplateGrid_pagingButtonPrevious,
+.default .templatesystemTemplateGrid_pagingBarPane .templatesystemTemplateGrid_pagingButtonNext {
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+}
+.default .mendixDataGrid_pagingBarPane .mendix_Button_button .mendix_Button_content,
+.default .templatesystemTemplateGrid_pagingBarPane .mendix_Button_button .mendix_Button_content {
+	padding: 0 4px; 
+}
+.default .mendixDataGrid_pagingStatus,
+.default .templatesystemTemplateGrid_pagingStatus { 
+	padding: 5px 0 0 5px; 
+}
+
+/* MendixClient */
+.default .MxClient_contentContainer { 
+	margin: 0;
+	border-color: #1C6EA5;
+    border-style: solid;
+    border-width: 1px 1px 0 1px;
+	background-color: #FFF; 
+	border-top-left-radius: 8px; 
+	border-top-right-radius: 8px; 
+	-webkit-border-top-right-radius: 8px; 
+	-webkit-border-top-left-radius: 3px; 
+	-moz-border-radius-topleft: 3px; 
+	-moz-border-radius-topright: 3px; 
+}
+.default .mendixFormView_invalidNode {
+	padding-top: 3px;
+	color: #B94A48;
+}
+.mx_layout .default .MxClient_contentPane { border-style: none; }
+.default .MxClient_nodeWrapper { padding: 5px; }
+
+/* Input Fields */
+.default .mendixFormView_textBox, 
+.default .mendixFormView_textArea, 
+.default .mendixDataGrid_searchItemTextBox, 
+.default .mendixDataGrid_searchItemSelectBox, 
+.default .mendixReferenceSelector_selectBox, 
+.default .mendixThemeSwitch select,
+.default .templatesystemTemplateGrid_searchItemTextBox,
+.default .mendixFormDatePicker_dateInput,
+.default .templatesystemTemplateGrid_searchItemSelectBox,
+.default .mendixFormView_selectBox { 
+	padding: 4px; 
+	color: #555;
+	border: 1px solid #b2c4d2; 
+	background: #FFF; 
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+
+	-webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+	-moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+	-ms-transition: border linear 0.2s, box-shadow linear 0.2s;
+	-o-transition: border linear 0.2s, box-shadow linear 0.2s;
+	transition: border linear 0.2s, box-shadow linear 0.2s;
+	-webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.default input:focus, 
+.default textarea:focus,
+.default select:focus {
+	border-color: rgba(82, 168, 236, 0.8);
+	-webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6) !important;
+	-moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6) !important;
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6) !important;
+}
+.default .MxClient_Focus { border-color: #619CD4; }
+.default .MxClient_formDisabled { 
+	color: #808080;	
+	border-color: #BBB;	
+	background: none #EEE; 
+}
+.default .MxClient_formUnabled { 
+	color: #333; 
+	border-color: #BBB; 
+	background: none #F00; 
+}
+
+/* MendixDataGrid */
+.default .mendixDataGrid { 
+	border-style: none;
+	border-radius: 3px; 
+	-moz-border-radius: 3px; 
+	-webkit-border-radius: 3px; 
+}
+.default .mendixDataGrid_searchPane { background: #FFF; }
+.default .mendixDataGrid_searchItemLabel { font-weight: bold; }
+.default .mendixDataGrid_gridHead .mendixDataGrid_tableHead { 
+	border-right: none; 
+	border-color: #98A9B3 #98A9B3 #B1BDC4 #98A9B3; 
+	background: #E4EBF0 url(images/layout/tablehead_bg.png) repeat-x top; 
+
+	box-shadow: inset 1px 0px 0px 0px #FFF; 
+	-webkit-box-shadow: inset 1px 0px 0px 0px #FFF; 
+	-moz-box-shadow: inset 1px 0px 0px 0px #FFF; 
+}
+.default .mendixDataGrid_gridHead .mendixDataGrid_tableHeadFirst { 
+	border-top-left-radius: 3px;
+	-webkit-border-top-left-radius: 3px;
+	-moz-border-radius-topleft: 3px; 
+}
+.default .mendixDataGrid_gridHead .mendixDataGrid_tableHeadLast { 
+	border-right: 1px solid #A3B6C5; 
+	border-top-right-radius: 3px; 
+	-webkit-border-top-right-radius: 3px; 
+	-moz-border-radius-topright: 3px; 
+}
+.default .mendixDataGrid_columnCaption {
+	color: #4B4F51;
+	text-shadow: 0 1px 0 #FFF;
+}
+.default .mendixDataGrid_tableRowOdd { background: #FBFCFC; }
+.default .mendixDataGrid_tableRowEven { background-color: #EEF4F5; }
+.default .mendixDataGrid_dataContainer { color: #4B4F51; }
+.default .mendixDataGrid_sortTextIcon {
+	color: #616566;
+    text-shadow: 0 1px 0 #FFF;
+}
+.default tfoot .mendixDataGrid_tableRow .mendixDataGrid_tableHead,
+.default .mendixDataGrid_tableRow .mendixDataGrid_tableData { 
+	padding: 5px;
+    border-color: #C4C0C8;
+    border-style: solid;
+    border-width: 0 1px 0 0;
+}
+.default .mendixDataGrid_tableRow .mendixDataGrid_tableDataFirst,
+.default tfoot .mendixDataGrid_tableRow .mendixDataGrid_tableHeadFirst { border-left: 1px solid #C4C0C8; }
+.default .mendixDataGrid_tableRowLast .mendixDataGrid_tableData,
+.default tfoot .mendixDataGrid_tableRow .mendixDataGrid_tableData { border-bottom: 1px solid #C4C0C8; }
+.default .mendixDataGrid_tableRow .mendixDataGrid_tableDataEnumIcon { text-align: center; }
+.default .mendixDataGrid_tableRowSelected .mendixDataGrid_tableData .mendixDataGrid_dataContainer { font-weight: normal; }
+.default .mendixDataGrid_tableRowSelected .mendixDataGrid_tableData { 
+	background: #FDF3D6 url(images/layout/tableRowSelected_bg.png) repeat-x top;
+	box-shadow: inset 0px -1px 0px 0px #d1dded;
+	-webkit-box-shadow: inset 0px -1px 0px 0px #d1dded; 
+	-moz-box-shadow: inset 0px -1px 0px 0px #d1dded; 
+}
+
+/* TemplateGrid */
+.default .templatesystemTemplateGrid {
+	border-style: none;
+}
+.default .templatesystemTemplateGrid_contentPane {
+    padding-top: 5px;
+}
+.default .templatesystemTemplateGrid_searchPane,
+.default .mendixDataGrid_searchPane {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: #F5F5F5;
+
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+.dj_quirks .default .templatesystemTemplateGrid_searchPane,
+.dj_quirks .default .mendixDataGrid_searchPane {
+	border: 1px solid #CCC;
+}
+.default .templatesystemTemplateGrid_gridItem {
+	cursor: pointer;
+	background: none;
+}
+.mx_layout .default .templatesystemTemplateGrid_gridItemEven {
+	background: none;
+}
+.default .templatesystemTemplateGrid .templatesystemTemplateGrid_tableHead .templatesystemTemplateGrid_label { font-weight: bold; }
+.default .templatesystemTemplateGrid .templatesystemTemplateGrid_tableHead { text-align: left; }
+.default .templatesystemTemplateGrid .templatesystemTemplateGrid_itemContainer {
+	margin: 1px 0;
+	border: 1px solid #C0CCDA;
+	background: #F0F3F8;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+
+	-webkit-box-shadow: inset 0 1px 0 #FFF;
+	-moz-box-shadow: inset 0 1px 0 #FFF;
+	box-shadow: inset 0 1px 0 #FFF;
+}
+.default .templatesystemTemplateGrid_itemContainer img {
+    /*border: 1px solid #D8E2E9;
+    padding: 4px;
+    background: #F0F2F3;
+    -webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;*/
+}
+.default .templatesystemTemplateGrid_gridItemEven .templatesystemTemplateGrid_itemContainer { background: #FFF; }
+.mx_layout .default .templatesystemTemplateGrid_gridItemSelected { background: none; }
+.default .templatesystemTemplateGrid_gridItemSelected .templatesystemTemplateGrid_itemContainer { background: #DDF4FB; }
+
+/* TabContainer */
+.default .dijitTabListWrapper {
+	padding: 7px;
+	border: 1px solid #b5b5b5;
+	background: #e6e6e6 url(images/layout/tab_bg.png) repeat-x top;
+	border-top-right-radius: 3px; 
+	-webkit-border-top-right-radius: 3px; 
+	border-top-left-radius: 3px; 
+	-webkit-border-top-left-radius: 3px;
+	-moz-border-radius-topleft: 3px; 
+	-moz-border-radius-topright: 3px; 
+
+	-webkit-box-shadow: inset 0px -1px 0px 0px #f6f6f6;
+	-moz-box-shadow: inset 0px -1px 0px 0px #f6f6f6;
+    box-shadow: inset 0px -1px 0px 0px #f6f6f6;
+}
+.default .dijitTabPaneWrapper { 
+	border-color: #B5B5B5; 
+	border-bottom-right-radius: 3px; 
+	-webkit-border-bottom-right-radius: 3px; 
+	border-bottom-left-radius: 3px; 
+	-webkit-border-bottom-left-radius: 3px; 
+	-moz-border-radius-bottomright: 3px; 
+	-moz-border-radius-bottomleft: 3px; 
+}
+.default .mendixTabContainer .templatesystemTemplateGrid,
+.default .dijitTabContainerTop-tabs,
+.default .mendixTabContainer .mendixDataGrid { 
+	border-style: none; 
+}
+.default .mendixTabContainer .dijitTab {
+	border-style: none;
+	background: none;
+}
+.default .mendixTabContainer .dijitTabChecked {
+	border-style: solid;
+	border-color: #4474A4 #36618C #2C537C #36618C;
+	border-width: 1px;
+	background: #4d88CA url(images/layout/tabChecked_bg.png) repeat-x top;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+
+	box-shadow: 0 1px 0 #C1C1C1;
+	-webkit-box-shadow: 0 1px 0 #C1C1C1;
+	-moz-box-shadow: 0 1px 0 #C1C1C1;
+}
+.default .mendixTabContainer .tabLabel {
+	color: #7b7b7b;
+	font-weight: bold;
+	text-shadow: 0 1px 0 #FFF;
+}
+.default .mendixTabContainer .dijitTabChecked .tabLabel {
+	color: #FFF;
+	text-shadow: 1px 0 0 #3467A8;
+}
+.default .mendixTabContainer .dijitTabHover .tabLabel { 
+	text-decoration: underline; 
+}
+.default .mendixTabContainer .dijitTabCheckedHover .tabLabel { 
+	text-decoration: none; 
+}
+.default .dijitTabInnerDiv { 
+	padding: 4px 14px 5px; 
+}
+
+	/* Nested Tabs */
+	.default .dijitTabContainerTabListNested {
+		margin: 5px;
+		background-color: #eeeeee; /* Old browsers */
+		background-repeat: repeat-x; /* Repeat the gradient */
+		background-image: -moz-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%); /* FF3.6+ */
+		background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5f5f5), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+		background-image: -webkit-linear-gradient(top, #f5f5f5 0%,#eeeeee 100%); /* Chrome 10+,Safari 5.1+ */
+		background-image: -ms-linear-gradient(top, #f5f5f5 0%,#eeeeee 100%); /* IE10+ */
+		background-image: -o-linear-gradient(top, #f5f5f5 0%,#eeeeee 100%); /* Opera 11.10+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
+		background-image: linear-gradient(top, #f5f5f5 0%,#eeeeee 100%); /* W3C */
+		border: 1px solid #e5e5e5;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+	}
+	.default .dijitTabContainerTabListNested .dijitTab {
+		margin: 0;
+		border-left: 1px solid #F5F5F5;
+    	border-right: 1px solid #E5E5E5;
+    	border-top: none;
+    	border-bottom: none;
+	}
+	.default .dijitTabContainerTabListNested .tabLabel {
+		color: #0088CC;
+		font-weight: normal;
+	}
+	.default .dijitTabContainerTabListNested .dijitTabChecked {
+		background: #E9E9E9;
+		box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05) inset;
+	}
+	.tundra .dijitTabContainerTabListNested .dijitTabChecked .dijitTabContent .tabLabel {
+		color: #777;
+		text-shadow: none;
+		font-weight: normal;
+		text-decoration: none;
+	}
+
+/* MendixWindow/Dialog */
+.default .dijitDialogUnderlay { 
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	filter: alpha(opacity=70);
+	-moz-opacity:0.7;
+	-khtml-opacity: 0.7;
+	opacity: 0.7;
+	background-color: #333; 
+}
+.default .mendixWindow { 
+	text-align: left; 
+	border-style: none;
+	padding: 0;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	box-shadow: 0 1px 5px #000;
+	-moz-box-shadow: 0 1px 5px #000;
+	-webkit-box-shadow: 0 1px 5px #000;
+}
+.default .mendixWindow_header { 
+	padding: 3px 0;
+	border: 1px solid #124064;
+	background: #1e69aa url(images/layout/window_title_bg.png) repeat-x top;
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-top-right-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-topright: 3px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+.default .mendixWindow_title { 
+	color: #FFF;
+	text-shadow: 1px 0 0 #1e5687;
+	font-size: 13px;
+}
+.default .mendixWindow_buttonClose { background-image: url(images/layout/icons/icnClose.png); }
+.default .mendixWindow_buttonMaximize { background-image: url(images/layout/icons/icnMaximize.png); }
+.default .mendixWindow_content {
+	border-width: 0 1px 1px 1px;
+	border-color: #999;
+	border-style: solid;
+	-webkit-border-bottom-left-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	-moz-border-radius-bottomright: 3px;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+.default .mendixFormView_controlPane {
+	border-width: 1px 0 0 0;
+	border-color: #C9D7E2;
+	border-style: solid;
+	-webkit-border-bottom-left-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	-moz-border-radius-bottomright: 3px;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+.default .mendixWindow .mendixFormView_tableHead,
+.default .mendixWindow .mendixFormView_tableData {
+	background: #eaeff3;
+}
+.default .mendixWindow .mendixWindow_buttonHover {
+	background-color: transparent;
+}
+
+/* Footer */
+.default .MxClient_bottomPane {
+	padding: 0;
+	border-color: #183765;
+    border-style: solid;
+    border-width: 0 1px;
+}
+.default .MxClient_footerPane { 
+	padding: 5px; 
+	color: #000; 
+	background-color: #FFF; 
+}
+
+/* Login Pop Up */
+.default .mendixLogin_underlayBlocked {	background: #DEF5FE url(images/login/login_bg.jpg) no-repeat top center; }
+.default .mendixLogin {
+	top: 147px !important;
+	width: 350px;
+	height: 303px;
+	border-style: none;
+	background: url(images/login/login_box.png) no-repeat top center;
+}
+.default .mendixLogin_topPane { padding-bottom: 8px; }
+.mendixLogin_container { margin: 10px 40px 0; }
+.default .mendixLogin_loginResult {	font-size: 11px; }
+.default .mendixLogin_loginTable th { padding-bottom: 0; }
+.default .mendixLogin_loginTable th, 
+.default .mendixLogin_loginTable td {
+	float: left;
+	width: 100%;
+}
+.default .mendixLogin_formLabel {
+	font-weight: bold;
+}
+.default .mendixLogin_formInput {
+	padding: 4px;
+	border: 1px solid #ccc;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+
+	-webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+	-moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+	-ms-transition: border linear 0.2s, box-shadow linear 0.2s;
+	-o-transition: border linear 0.2s, box-shadow linear 0.2s;
+	transition: border linear 0.2s, box-shadow linear 0.2s;
+	-webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.dj_quirks .default .mendixLogin_formInput {
+	width: 200px;
+}
+.default .mendixLogin_formButton {
+	cursor: pointer;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #0064cd #0064cd #003f81;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	padding: 3px;
+	font-weight: bold;
+	font-size: 13px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+
+	-webkit-transition: 0.1s linear all;
+	-moz-transition: 0.1s linear all;
+	-ms-transition: 0.1s linear all;
+	-o-transition: 0.1s linear all;
+	transition: 0.1s linear all;
+}
